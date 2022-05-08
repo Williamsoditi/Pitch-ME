@@ -1,2 +1,4 @@
 env_pitch/
 *.pyc
+.vscode/
+__pycache__/
