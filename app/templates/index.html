@@ -62,10 +62,30 @@
             <div class="row">
                 <div class="col-sm-6">
                     {% for pitch in pitches %}
-                    
+                    <div class="card text-center">
+                        <div class="card-header">User - Pitches</div>
+                        <div class="card-body">
+                          <h3 class="card-title">Category: {{ pitch.category }}</h3>
+                          <p class="card-text">Pitch : {{ pitch.context }}</p>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <a class =" btn btn-info" href="{{ url_for('main.new_comment', pitch_id = pitch.id)}}">Comment</a>
+                            </div>
+                            <div class="col-sm-4">
+                                <a class =" btn btn-info" href="{{url_for('main.like',id = pitch.id)}}">Upvotes:{{pitch.upvote.count()}}</a>
+                            </div>
+                            <div class="col-sm-4">
+                                <a class =" btn btn-danger" href="{{url_for('main.dislike',id = pitch.id)}}">Downvotes:{{pitch.downvote.count()}}</a>
+                            </div>
+                        </div>   
+                        <div class="card-footer text-muted">Uploaded By:{{ users.username }}</strong></div>
+                    </div>
                     {% endfor %}
                 </div>
             </div>
         </div>
     </body>
+
+    {%endblock%}
 </html>
