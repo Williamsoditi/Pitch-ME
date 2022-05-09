@@ -3,6 +3,7 @@ from . import main
 from ..models import Comment,Pitch, User,Upvote,Downvote
 from .. import db
 from .forms import CommentForm,PitchForm,UpdateProfile
+from flask_login import login_required
 
 
 #Application views
