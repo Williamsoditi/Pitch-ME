@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block contant %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            {{pitch.category}}
+        </div>
+        <div class="col-sm-6">
+            {{format_comment|safe}}
+        </div>
+    </div>
+</div>
