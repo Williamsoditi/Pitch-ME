@@ -9,7 +9,7 @@
         <title> Pitch- ME </title>
         {% endif %}
         {% block styles%}
-             {{ super() }}
+            {{ super() }}
         <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
         {% endblock %}
     </head>
@@ -21,15 +21,14 @@
     </header>
     <body>
         {% block content %}
-        <hr>
-        <h2 class="text-center">Some pitches to view;</h2>
+        <h2 class="text-center">Some pitches to view</h2>
         <div class="card">
             <div class="card-body">
                 <div class="col-sm-4">
                     <div class="card text-center">
-                        <div class="card-header">Featured</div>
+                        <!-- <div class="card-header">Featured</div> -->
                         <div class="card-body">
-                          <h5 class="card-title">Pick-up Line</h5>
+                          <h5 class="card-title">~ Pick-up Line ~</h5>
                           <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                         </div>
                         <div class="card-footer text-muted">Uploaded By:<strong>&nbsp;Williams Olang</strong></div>
@@ -37,9 +36,9 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="card text-center">
-                        <div class="card-header">New-pitch</div>
+                        <!-- <div class="card-header">New-pitch</div> -->
                         <div class="card-body">
-                          <h5 class="card-title">Innovation</h5>
+                          <h5 class="card-title">~ Innovation ~</h5>
                           <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                         </div>
                         <div class="card-footer text-muted">Uploaded By:<strong>&nbsp;Jonathan Owilli</strong></div>
@@ -47,9 +46,9 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="card text-center">
-                        <div class="card-header">Featured</div>
+                        <!-- <div class="card-header">Featured</div> -->
                         <div class="card-body">
-                          <h5 class="card-title">Sales-Pitch</h5>
+                          <h5 class="card-title">~ Sales-Pitch ~</h5>
                           <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                         </div>
                         <div class="card-footer text-muted">Uploaded By:<strong>&nbsp;Guess Who</strong></div>
@@ -57,7 +56,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container mt-5">
             <h2 class="text-center">Some of our users' pitches</h2>
             <div class="row">
                 <div class="col-sm-6">
@@ -70,13 +69,13 @@
                         </div>
                         <div class="row">
                             <div class="col-sm-4">
-                                <a class =" btn btn-info" href="{{ url_for('main.new_comment', pitch_id = pitch.id)}}">Comment</a>
+                                <a class =" btn btn-sm btn-info" href="{{ url_for('main.new_comment', pitch_id = pitch.id)}}">Comment</a>
                             </div>
                             <div class="col-sm-4">
-                                <a class =" btn btn-info" href="{{url_for('main.like',id = pitch.id)}}">Upvotes:{{pitch.upvote.count()}}</a>
+                                <a class =" btn btn-sm btn-info" href="{{url_for('main.like',id = pitch.id)}}">Upvotes:{{pitch.upvote.count()}}</a>
                             </div>
                             <div class="col-sm-4">
-                                <a class =" btn btn-danger" href="{{url_for('main.dislike',id = pitch.id)}}">Downvotes:{{pitch.downvote.count()}}</a>
+                                <a class =" btn btn-sm btn-danger" href="{{url_for('main.dislike',id = pitch.id)}}">Downvotes:{{pitch.downvote.count()}}</a>
                             </div>
                         </div>   
                         <div class="card-footer text-muted">Uploaded By:{{ users.username }}</strong></div>
