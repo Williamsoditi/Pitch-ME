@@ -14,9 +14,18 @@
           <div class = "col-md-6">
             {{wtf.quick_form(pitch_form)}}
           </div>
+          <div class="col-md-6">
+            <img src="{{url_for('static', filename='assets/pitch.jpg')}}" class="img-thumbnail bg-primary img-fluid"/>
+          </div>
       </div>
   </div>
- </body> 
+  <footer>
+    <!-- FOOTER BLOCK -->
+    {% block footer %}
+    {% include 'footer.html' %}
+    {% endblock %}
+  </footer>
+</body> 
 
 {%endblock%}
 
