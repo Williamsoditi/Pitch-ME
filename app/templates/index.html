@@ -21,8 +21,12 @@
     </header>
     <body>
         {% block content %}
-        <h2 class="text-center">Some pitches to view</h2>
-        <div class="card">
+        {% block landing %}
+        {% include 'landing.html'%}
+        {%endblock%}
+        <h2 class="text-center">Some Examples</h2>
+        <hr>
+        <div class="card mb-5">
             <div class="card-body">
                 <div class="col-sm-4">
                     <div class="card text-center">
@@ -58,18 +62,19 @@
         </div>
         <div class="container mt-5">
             <h2 class="text-center">Some of our users' pitches</h2>
+            <hr>
             <div class="row">
                 <div class="col-sm-6">
                     {% for pitch in pitches %}
                     <div class="card text-center">
-                        <div class="card-header">User - Pitches</div>
+                        <div class="card-header">{{ users.username }}</div>
                         <div class="card-body">
                           <h3 class="card-title">Category: {{ pitch.category }}</h3>
                           <p class="card-text">Pitch : {{ pitch.context }}</p>
                         </div>
                         <div class="row">
                             <div class="col-sm-4">
-                                <a class =" btn btn-sm btn-info" href="{{ url_for('main.new_comment', pitch_id = pitch.id)}}">Comment</a>
+                                <a class =" btn btn-sm btn-success" href="{{ url_for('main.new_comment', pitch_id = pitch.id)}}">Comment</a>
                             </div>
                             <div class="col-sm-4">
                                 <a class =" btn btn-sm btn-info" href="{{url_for('main.like',id = pitch.id)}}">Upvotes:{{pitch.upvote.count()}}</a>
