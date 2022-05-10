@@ -1,5 +1,7 @@
 import os
 
+from flask_sqlalchemy import SQLAlchemy
+
 class Config:
     '''
     General configuration of parent class
@@ -29,24 +31,19 @@ class ProdConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    # SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL").replace("://", "ql://", 1)
 
-
-#Add test config here
+class TestConfig(Config):
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/pitch_me_test'
 
 class DevConfig(Config):
-    '''
-    Development  configuration child class
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/pitch_me'
 
-    Args:
-        Config: The parent configuration class with General configuration settings
-    '''
-
-    DEBUG = True
+DEBUG = True
 
 config_options = {
 'development':DevConfig,
 'production':ProdConfig,
-# 'test':TestConfig
+'test':TestConfig
 }
 
