@@ -10,6 +10,8 @@
 Pitch-ME is an application intended to make use of one minute to relay pitches to users whereby users can submit pitches according to category and vote on them and leave comments to give their feedback on them.<br>
 The newest pitches are displayed first.
 
+![Project-design](/app/static/assets/Overview.jpg)
+
 The following is a live link to the project:
 ## Installation process
 To access my repository link:
