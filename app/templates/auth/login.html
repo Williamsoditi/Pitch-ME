@@ -5,8 +5,11 @@
 <div class="container">
   <div class="container"> 
     <div class="row">
-      <div class= "col-md-2"> </div>
-      <div class="col-md-8">
+      <div class= "col-md-6">
+        <img src="{{url_for('static', filename='assets/welcome.jpg')}}" class="img-thumbnail bg-primary img-fluid"/>
+
+      </div>
+      <div class="col-md-6">
       <!--Flash message -->
       {% for message in get_flashed_messages() %}
         <div class="alert alert-danger">
@@ -19,10 +22,9 @@
       {{wtf.quick_form(signin_form)}}
       <p> Don't have an account? <a href="{{url_for('auth.signup')}}">Sign up here</a></p>
      </div>
-     <div clas="col-md-2"> </div>
     </div>
 </div>
-<footer>
+<footer class="mt-5">
   <!-- FOOTER BLOCK -->
   {% block footer %}
   {% include 'footer.html' %}

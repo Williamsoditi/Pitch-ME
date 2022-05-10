@@ -3,25 +3,23 @@
 
 {% block content %}
 <div class="container">
-    <div class="container">
-        <div class="row">
-        <div class="col-md-2"> </div>
-        <div class="col-md-8">
-            <h3 class="text-center"><u>Sign-up to experience first-class features</u></h3>
-        
+    <div class="row">
+    <!-- <div class="col-md-2"> </div> -->
+    <div class="col-md-6">
+        <h3 class="text-center"><u>Sign-up to experience first-class features</u></h3>
         {{wtf.quick_form(signup_form)}}
-        
-        </div>
-        <div class="col-md-2"></div>
-        </div>
-        </div>
-        <footer>
-            <!-- FOOTER BLOCK -->
-            {% block footer %}
-            {% include 'footer.html' %}
-            {% endblock %}
-        </footer>
-        
-        {% endblock%}
+    </div>
+    <div class="col-md-6">
+        <img src="{{url_for('static', filename='assets/login.jpg')}}" class="img-thumbnail bg-primary img-fluid"/>
+    </div>
+    </div>
+    <footer>
+        <!-- FOOTER BLOCK -->
+        {% block footer %}
+        {% include 'footer.html' %}
+        {% endblock %}
+    </footer>
+    
+    {% endblock%}
 </div>
 
