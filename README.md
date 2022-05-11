@@ -12,7 +12,7 @@ The newest pitches are displayed first.
 
 ![Project-design](/app/static/assets/Overview.jpg)
 
-The following is a live link to the project:
+The following is a live link to the project: [Live link](https://dubb-pitches.herokuapp.com/)
 ## Installation process
 To access my repository link:
 [Click here](https://github.com/Williamsoditi/Pitch-ME.git)
