@@ -1,7 +1,5 @@
 import os
 
-# from flask_sqlalchemy import SQLAlchemy
-
 class Config:
     '''
     General configuration of parent class
