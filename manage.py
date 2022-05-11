@@ -6,7 +6,7 @@ from app import create_app,db
 from app.models import User,Pitch,Comment,Upvote,Downvote
 
 # Creating app instance
-app = create_app('production')
+app = create_app('development')
 
 manager = Manager(app)
 manager.add_command('server',Server)
