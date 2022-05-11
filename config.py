@@ -8,7 +8,6 @@ class Config:
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL').replace("://", "ql://", 1)
     SQLALCHEMY_TRACK_MODIFICATIONS=True
 
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://moringa:Access@localhost/pitch_me'
 
     #  email configurations
     MAIL_SERVER = 'smtp.googlemail.com'
